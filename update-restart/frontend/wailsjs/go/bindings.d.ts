@@ -3,6 +3,9 @@ export interface go {
     "App": {
 		Greet(arg1:string):Promise<string>
     },
+    "Updater": {
+		CheckForUpdate():Promise<string>
+    },
   }
 
 }

@@ -41,6 +41,7 @@ require (
 	github.com/leaanthony/winc v0.0.0-20220208061147-37b059b9dc3b // indirect
 	github.com/pkg/browser v0.0.0-20210706143420-7d21f8c997e2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/rcrowley/goagain v0.0.0-20140424170347-f2f192b5d1a9
 	github.com/rhysd/go-github-selfupdate v1.2.3
 	github.com/savsgio/gotils v0.0.0-20200117113501-90175b0fbe3f // indirect
 	github.com/tkrajina/go-reflector v0.5.5 // indirect

@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"net"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -96,9 +97,11 @@ func SelfUpdateMac() bool {
 	}
 }
 
-type Updater struct{}
+type Updater struct {
+	l net.Listener
+}
 
-func (b *Updater) CheckForUpdate() string {
+func (u *Updater) CheckForUpdate() string {
 	/*
 			latest, found, err := selfupdate.DetectLatest("achhabra2/riftshare")
 			if err != nil {
@@ -113,6 +116,17 @@ func (b *Updater) CheckForUpdate() string {
 			}
 		return true, latest.Version.String()
 	*/
+
+	// do a restart
+	// goagain.ForkExec(u.l)
+	aa := "/Users/wwestgarth/work/wails-update-restart/update-restart/build/bin/update-restart.app"
+	cmd := exec.Command("open", "-a", aa)
+	if err := cmd.Run(); err != nil {
+		log.Fatal("ahhh")
+	}
+
+	// kill ourselves
+	// log.Fatal("we killed ourselves")
 
 	// pretend we always have a latest
 	return "0.2.0"

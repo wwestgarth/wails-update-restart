@@ -4,6 +4,7 @@ import (
 	"embed"
 	"log"
 
+	"github.com/rcrowley/goagain"
 	"github.com/wailsapp/wails/v2/pkg/options/mac"
 
 	"github.com/wailsapp/wails/v2"
@@ -20,11 +21,18 @@ var icon []byte
 
 func main() {
 	// Create an instance of the app structure
+
+	l, err := goagain.Listener()
+	if err == nil {
+		// something already running, should not happen
+		// log.Fatal("already something running?")
+	}
+
 	app := NewApp()
-	updater := Updater{}
+	updater := Updater{l: l}
 
 	// Create application with options
-	err := wails.Run(&options.App{
+	err = wails.Run(&options.App{
 		Title:             "update-restart version 1.0",
 		Width:             720,
 		Height:            570,
