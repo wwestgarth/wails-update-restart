@@ -1,0 +1,20 @@
+{
+  "name": "update-restart",
+  "frontend:build": "",
+  "frontend:install": "",
+  "frontend:dev": "",
+  "wailsjsdir": "./frontend",
+  "version": "2",
+  "Path": "",
+  "BuildDir": "",
+  "outputfilename": "update-restart",
+  "OutputType": "",
+  "Platform": "",
+  "Author": {
+    "name": "wwestgarth",
+    "email": "william@vega.xyz"
+  },
+  "debounceMS": 100,
+  "devserverurl": "http://localhost:34115",
+  "appargs": ""
+}

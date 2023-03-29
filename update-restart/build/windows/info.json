@@ -1,0 +1,15 @@
+{
+	"fixed": {
+		"file_version": "1.0.0"
+	},
+	"info": {
+		"0000": {
+			"ProductVersion": "1.0.0",
+			"CompanyName": "update-restart",
+			"FileDescription": "update-restart",
+			"LegalCopyright": "Copyright.........",
+			"ProductName": "update-restart",
+			"Comments": "Built using Wails (https://wails.app)"
+		}
+	}
+}
