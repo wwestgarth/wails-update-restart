@@ -21,6 +21,7 @@ var icon []byte
 func main() {
 	// Create an instance of the app structure
 	app := NewApp()
+	updater := Updater{}
 
 	// Create application with options
 	err := wails.Run(&options.App{
@@ -44,6 +45,7 @@ func main() {
 		OnShutdown:        app.shutdown,
 		Bind: []interface{}{
 			app,
+			&updater,
 		},
 		// Windows platform specific options
 		Windows: &windows.Options{

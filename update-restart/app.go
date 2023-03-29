@@ -96,7 +96,9 @@ func SelfUpdateMac() bool {
 	}
 }
 
-func CheckForUpdate() (bool, string) {
+type Updater struct{}
+
+func (b *Updater) CheckForUpdate() string {
 	/*
 			latest, found, err := selfupdate.DetectLatest("achhabra2/riftshare")
 			if err != nil {
@@ -113,5 +115,5 @@ func CheckForUpdate() (bool, string) {
 	*/
 
 	// pretend we always have a latest
-	return true, "0.2.0"
+	return "0.2.0"
 }

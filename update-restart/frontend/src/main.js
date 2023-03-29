@@ -9,7 +9,7 @@ window.greet = function () {
   let name = nameElement.value;
 
   // Call App.Greet(name)
-  window.go.main.App.Greet(name).then((result) => {
+  window.go.main.Updater.CheckForUpdate().then((result) => {
     // Update result with data back from App.Greet()
     document.getElementById("result").innerText = result;
   });
